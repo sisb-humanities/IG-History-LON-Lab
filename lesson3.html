@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lesson 3 · Why did disarmament fail?</title>
+<link rel="stylesheet" href="assets/style.css"></head>
+<body><div id="app"></div>
+<script src="assets/lab.js"></script>
+<script>
+LAB.start({
+ n:3, pages:"Walsh pp.46–47", title:"Why did disarmament fail in the 1930s?",
+ target:"A 6-MARK answer: two different reasons, each EXPLAINED, on why the League did not impose sanctions on Japan.",
+ wire:[["1932","The Disarmament Conference opens in Geneva"],["Jul 1932","Germany walks out, demanding equality of arms"],["Jan 1933","Hitler becomes Chancellor of Germany"],["Oct 1933","Germany leaves the Conference and the League"],["1935","Anglo-German Naval Agreement upsets France"]],
+ tabs:[
+ {id:"warm",label:"Warm-up",blocks:[
+  {type:"order",h:"The Disarmament Conference",intro:"Put these in order.",prompt:"Tap the earliest first",
+   items:[{t:"The Conference opens in Geneva (1932)",note:"Many hopes were placed on it."},
+   {t:"Germany walks out, demanding equality of arms (1932)",note:"Germany said other countries had not disarmed as the treaty promised."},
+   {t:"Hitler becomes Chancellor (January 1933)",note:"A new, more aggressive government."},
+   {t:"Germany leaves the Conference and the League (October 1933)",note:"The Conference could not continue."},
+   {t:"Britain signs the Anglo-German Naval Agreement (1935)",note:"Signed without France, and it upset France."}],after:"Disarmament collapsed within about a year of Hitler taking power."},
+  {type:"flash",h:"Key facts",cards:[
+   {q:"Why did Germany walk out of the Conference?",a:"It wanted equality of arms. It said others had not disarmed as promised."},
+   {q:"What did Hitler do in October 1933?",a:"Took Germany out of the Conference and the League."},
+   {q:"What was the Anglo-German Naval Agreement?",a:"A 1935 agreement between Britain and Germany. It upset France."},
+   {q:"What was missing from the Conference's July 1932 agreement?",a:"Detail. The Conference agreed an aim in principle but not the detail of how to disarm."},
+   {q:"What did Source 8 (David Low, 1934) show about ordinary people?",a:"That they wanted peace but their leaders did not deliver it."}]}
+ ]},
+ {id:"check",label:"Check",blocks:[
+  {type:"quiz",h:"Knowledge check",items:[
+   {q:"Why did Germany walk out of the Conference?",opts:["It wanted to join the League","It wanted equality of arms","It wanted peace with France"],a:1,why:"Germany said the others had not disarmed as the treaty said."},
+   {q:"Who came to power in Germany in January 1933?",opts:["Stresemann","Hitler","The Kaiser"],a:1,why:"Hitler became Chancellor."},
+   {q:"What did Germany do in October 1933?",opts:["Joined the League","Left the Conference and the League","Signed a naval agreement"],a:1,why:"This ended the Conference's chances."},
+   {q:"Why did the 1935 Anglo-German Naval Agreement upset France?",opts:["Britain acted without consulting its ally","France wanted a bigger navy","Germany joined the League"],a:0,why:"It let Germany rebuild a navy and weakened united action."},
+   {q:"Which was a reason the League could not impose sanctions on Japan?",opts:["The USA was not a member, so Japan could still trade with it","Japan was too small to trade","The Lytton Report supported Japan"],a:0,why:"Note the explanation, not just ‘USA not a member’."},
+   {q:"What does ‘identified’ mean in an examiner's report?",opts:["A reason stated but not explained","A fully developed reason","A wrong reason"],a:0,why:"Identified reasons score low. Explained reasons score high."}]},
+  {type:"sort",h:"Who was to blame?",intro:"Think! Q1: how was each to blame for the Conference's failure?",
+   bins:[{id:"ger",label:"Germany"},{id:"bri",label:"Britain"},{id:"fra",label:"France"},{id:"lea",label:"The League itself"}],
+   items:[
+   {t:"Walked out of the Conference in 1932 demanding equality.",bin:"ger",why:"Germany's action broke up the talks."},
+   {t:"Left the League and the Conference in October 1933.",bin:"ger",why:"Under Hitler."},
+   {t:"Signed the Anglo-German Naval Agreement without consulting France.",bin:"bri",why:"Britain put its own interests first."},
+   {t:"Wanted security guarantees before it would reduce its own forces.",bin:"fra",why:"France feared a rearmed Germany."},
+   {t:"Agreed only the aim in July 1932, not the detail.",bin:"lea",why:"The Conference did not settle how to disarm."},
+   {t:"Had no army of its own to enforce decisions.",bin:"lea",why:"A basic weakness."},
+   {t:"Did not follow through on the disarmament promised in the Treaty of Versailles.",bin:["bri","fra"],why:"Germany argued that the Allies had not disarmed, which both Britain and France could be blamed for."},
+   {t:"Put its own interests ahead of collective action.",bin:["bri","fra"],why:"A pattern across the 1930s."}]},
+  {type:"quiz",h:"Same reason or different?",intro:"A 6-marker needs <b>two different reasons</b>. Spot when two sentences are really the same one.",items:[
+   {q:"A: ‘The USA was not in the League.’ B: ‘America's absence meant Japan could still trade.’",opts:["Same reason","Different reasons"],a:0,why:"B just explains A. Together they are ONE explained reason."},
+   {q:"A: ‘The USA was not in the League.’ B: ‘Britain and France would not risk war.’",opts:["Same reason","Different reasons"],a:1,why:"Two separate causes."},
+   {q:"A: ‘The Lytton Report took a year.’ B: ‘Japan had already conquered Manchuria by then.’",opts:["Same reason","Different reasons"],a:0,why:"B is the consequence of A. One reason."},
+   {q:"A: ‘Britain wanted good relations with Japan.’ B: ‘An arms ban was not agreed.’",opts:["Same reason","Different reasons"],a:1,why:"Different: one is attitude, the other is a missing measure."}]},
+  {type:"sort",h:"Identified or explained?",intro:"Identified scores low. Explained scores high.",
+   bins:[{id:"i",label:"Identified only"},{id:"x",label:"Explained"}],
+   items:[
+   {t:"The USA was not a member of the League.",bin:"i",why:"A fact. We aren't told why it mattered."},
+   {t:"The USA was not a member, so Japan could keep trading with it, which made League sanctions almost useless.",bin:"x",why:"It says how it stopped sanctions."},
+   {t:"Britain and France did not want war.",bin:"i",why:"A statement. No effect is shown."},
+   {t:"Britain and France would not risk war, so no one would send forces to enforce a ban.",bin:"x",why:"Shows the result."},
+   {t:"The Lytton Report took a long time.",bin:"i",why:"Describes the delay only."},
+   {t:"The Lytton Report took a year, so Japan had finished the conquest before the League decided.",bin:"x",why:"Shows what the delay meant."},
+   {t:"Manchuria was far away.",bin:"i",why:"Only a fact about distance."},
+   {t:"Manchuria was far away, so Britain and France had few ships nearby and less interest in a fight.",bin:"x",why:"Shows why distance mattered."}]}
+ ]},
+ {id:"think",label:"Think",blocks:[
+  {type:"chain",h:"Reason 1: the USA",start:"The USA was not a member of the League",
+   steps:[{ask:"Japan was a major trader. What could Japan still do?",opts:["Trade with the USA","Nothing at all","Join the Americans"],a:0},
+   {ask:"What did that do to League sanctions?",opts:["They hardly hurt Japan","They destroyed Japan","They became stronger"],a:0},
+   {ask:"What did League members conclude?",opts:["Sanctions would harm them more than Japan, so they would not impose them","Sanctions should be doubled","The USA would pay"],a:0}],finish:"One reason, fully explained. Now say it in your own words."},
+  {type:"chain",h:"Reason 2: fear of war",start:"Britain and France did not want to risk war with Japan",
+   steps:[{ask:"What did the League have to enforce a ban?",opts:["No army of its own","A large army","A navy in Asia"],a:0},
+   {ask:"So who would have to supply the force?",opts:["Mainly Britain and France","The USA","Japan"],a:0},
+   {ask:"What did that mean for the arms ban?",opts:["It was not agreed","It was strictly enforced","Japan agreed to it"],a:0}],finish:"A second reason, with a different cause."},
+  {type:"chain",h:"Reason 3: delay",start:"The Lytton Report took a year",
+   steps:[{ask:"What did Japan do during that time?",opts:["Completed its conquest","Withdrew","Waited"],a:0},
+   {ask:"What did the League's report then amount to?",opts:["Condemnation after the event","A plan to restore Manchuria by force","Nothing was published"],a:0},
+   {ask:"What did Japan do next?",opts:["Resigned from the League and invaded Jehol","Obeyed","Appealed"],a:0}],finish:"A third reason. Pick the two you can explain best."}
+ ]},
+ {id:"write",label:"Write",blocks:[
+  {type:"brief",h:"The 6-mark answer",label:"Question",mins:12,q:["Why did the League fail to impose ",{w:"sanctions",m:"Measures like trade bans against a country to punish it."}," on Japan after the invasion of ",{w:"Manchuria",m:"Chinese region invaded by Japan in 1931."},"? [",{w:"6",m:"Two explained reasons. About two short paragraphs. No judgement and no conclusion needed."},"]"],
+   rules:[["Reason 1: ","one reason, ‘This meant that…’ to explain how it stopped sanctions."],["Reason 2: ","a DIFFERENT reason, explained the same way."],["Facts: ","each backed by a precise fact from p.45."]],
+   nudges:["Are your two reasons really different?","Does each reason say HOW it stopped sanctions?","Is there a fact from p.45 in each?","Check against the ‘same or different?’ questions."]}
+ ]},
+ {id:"review",label:"Review",blocks:[
+  {type:"check",h:"Mark your own answer",items:["Reason 1 is clearly stated","Reason 1 is explained (‘This meant that…’)","Reason 1 has a precise fact","Reason 2 is clearly stated and DIFFERENT","Reason 2 is explained","Reason 2 has a precise fact"],mode:"mark",bands:[{min:0,t:"Aim for at least four."},{min:3,t:"Two reasons, but thin."},{min:4,t:"Good."},{min:6,t:"Full marks work."}]},
+  {type:"model",h:"Compare with a model",models:[{title:"Model: 6 marks",q:"Why did the League fail to impose sanctions on Japan after the invasion of Manchuria? [6]",paras:[[
+   {k:"p",t:"One reason was that the USA was not a member of the League.",note:"The reason in sentence one."},
+   {k:"e",t:"The USA was one of Japan's main trading partners.",note:"A fact that supports the reason."},
+   {k:"x",t:"This meant that Japan could carry on trading with the USA whatever the League did, so sanctions would have hurt League members more than Japan.",note:"The explanation turns the fact into HOW it stopped sanctions."}],[
+   {k:"p",t:"Another reason was that Britain and France did not want to risk war with Japan.",note:"A different reason."},
+   {k:"e",t:"The League had no army of its own and depended on those two powers.",note:"The fact."},
+   {k:"x",t:"This meant that an arms ban or any forceful action could not be agreed, because neither would send forces so far away to fight Japan.",note:"Explains how it stopped action."}]]}]},
+  {type:"twin",h:"Write another",twins:[{label:"Twin question",q:"Why did the Disarmament Conference fail to achieve disarmament? [6]",change:"Different crisis, same moves: two different reasons, each explained.",mins:12,facts:["Germany walked out in 1932","Hitler left the Conference and the League in October 1933","France wanted security before disarming","The Conference agreed only the aim, not the detail"]}]}
+ ]}
+ ]
+});
+</script></body></html>

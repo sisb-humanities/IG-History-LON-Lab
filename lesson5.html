@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lesson 5 · Why did the League fail?</title>
+<link rel="stylesheet" href="assets/style.css"></head>
+<body><div id="app"></div>
+<script src="assets/lab.js"></script>
+<script>
+LAB.start({
+ n:5, pages:"Walsh pp.52–53", title:"Why did the League of Nations fail?",
+ target:"ONE paragraph: your mark out of 100 for the League. Mark first, then a success, a failure, and why one matters more.",
+ wire:[["1920","The League begins work in Geneva"],["1925","Locarno: the League's high point?"],["1931","Japan invades Manchuria"],["1933","Germany and Japan leave the League"],["1935","Italy invades Abyssinia"]],
+ tabs:[
+ {id:"warm",label:"Warm-up",blocks:[
+  {type:"flash",h:"The FAILURE memory aid",intro:"Each letter is one reason the League failed. <b>U</b> (Unfair treaty) is covered in Chapter 3.",cards:[
+   {q:"F",a:"French and British self-interest: they put their own interests first."},
+   {q:"A",a:"Absent powers: the USA never joined; Germany and Japan left; the USSR joined late."},
+   {q:"I",a:"Ineffective sanctions: no oil ban on Italy, no trade ban on Japan."},
+   {q:"L",a:"Lack of armed forces: no army, so it relied on members."},
+   {q:"R",a:"Reaching decisions too slowly: the Lytton Report took a year."},
+   {q:"E",a:"Economic depression: countries looked after themselves and aggression rose."},
+   {q:"U",a:"Unfair treaty: the Treaty of Versailles, covered in Chapter 3."}]},
+  {type:"sort",h:"Which letter?",intro:"Match each fact to the weakness it shows.",
+   bins:[{id:"F",label:"F"},{id:"A",label:"A"},{id:"I",label:"I"},{id:"L",label:"L"},{id:"R",label:"R"},{id:"E",label:"E"}],
+   items:[
+   {t:"Britain and France did not close the Suez Canal.",bin:"F",why:"Self-interest and fear of war."},
+   {t:"The USA sold more oil to Italy.",bin:["A","I"],why:"The USA was outside the League, so sanctions failed."},
+   {t:"The League banned arms and loans to Italy but not oil.",bin:"I",why:"Sanctions that did not bite."},
+   {t:"The League could not send troops to Manchuria.",bin:"L",why:"It had no army."},
+   {t:"It took a year for the Lytton Report.",bin:"R",why:"The delay let Japan finish."},
+   {t:"Japan's silk exports to the USA collapsed.",bin:"E",why:"The Depression pushed Japan towards expansion."},
+   {t:"Britain signed the Anglo-German Naval Agreement without France.",bin:"F",why:"Self-interest."},
+   {t:"Germany left the League in 1933.",bin:"A",why:"A major power absent."},
+   {t:"Italy invaded Abyssinia after a long delay on oil.",bin:["R","I"],why:"Slow, and ineffective."},
+   {t:"Countries put up tariffs after 1929.",bin:"E",why:"The Depression."},
+   {t:"The League asked members to provide forces and they refused.",bin:"L",why:"No army of its own."},
+   {t:"Hoare and Laval made a secret deal behind the League's back.",bin:"F",why:"Britain and France acted in their own interests."}]}
+ ]},
+ {id:"check",label:"Check",blocks:[
+  {type:"quiz",h:"Knowledge check",items:[
+   {q:"Which of these is a weakness from the FAILURE list?",opts:["Lack of armed forces","Too many members","Too much money"],a:0,why:"The League had no army."},
+   {q:"What does ‘A’ stand for?",opts:["Absent powers","Aggression","Agreement"],a:0,why:"The USA never joined."},
+   {q:"The League's best successes were in…",opts:["Humanitarian work and small disputes in the 1920s","Stopping Japan","Stopping Mussolini"],a:0,why:"The Aaland Islands and the health and labour work."},
+   {q:"When did the League first impose sanctions on a country?",opts:["On Italy, 1935","On Japan, 1931","In 1925"],a:0,why:"The first time, but with gaps."},
+   {q:"What does the mark out of 100 need first?",opts:["The mark itself, in the first sentence","A history of the League","A quote"],a:0,why:"Your judgement goes first."},
+   {q:"Which would strengthen an answer about a success?",opts:["A precise fact such as 400,000 prisoners sent home","‘It did good things’","The year it was founded"],a:0,why:"Precision turns an opinion into evidence."}]},
+  {type:"match",h:"Chapter 2 keywords",intro:"Tap a word, then its meaning. Check against the Chapter Summary on p.53.",pairs:[
+   {t:"Sanctions",d:"Measures such as trade bans to punish a state"},
+   {t:"Collective security",d:"Members acting together to protect each other"},
+   {t:"Tariffs",d:"Taxes on imported goods"},
+   {t:"Lytton Report",d:"The League's inquiry into Manchuria"},
+   {t:"Hoare–Laval Pact",d:"Secret plan to give Italy most of Abyssinia"},
+   {t:"Disarmament",d:"Reducing the number of weapons"},
+   {t:"Covenant",d:"The League's rulebook"},
+   {t:"Peace Ballot",d:"1935 British poll that backed force to defend Abyssinia"}]}
+ ]},
+ {id:"think",label:"Think",blocks:[
+  {type:"calibrate",h:"What mark out of 100?",intro:"Give the League up to 25 for each of its four aims. Open ‘Remind me’ if you need the evidence. Then answer the heckler.",
+   aims:[
+   {id:"agg",label:"Discourage aggression",facts:["Aaland Islands, 1921: success","Bulgaria, 1925: success","Vilna and Corfu: powerful states ignored it","Manchuria and Abyssinia: failure"]},
+   {id:"co",label:"Encourage co-operation",facts:["Locarno, Dawes, Kellogg–Briand in the 1920s","Many agencies: ILO, health","Germany and Japan left, USA never joined"]},
+   {id:"dis",label:"Encourage disarmament",facts:["Washington naval limits in the 1920s","The Disarmament Conference collapsed in 1933","Hitler rearmed"]},
+   {id:"liv",label:"Improve living conditions",facts:["400,000 prisoners sent home","White lead banned","Institutes in Singapore, London, Denmark","200,000 slaves freed in Sierra Leone"]}],
+   heck:["That is very generous. The League failed to stop Japan, Italy or Hitler.","Defend that. What are the best successes?","So you think it did half its job. Which half?","That sounds harsh. What about the humanitarian work and the 1920s?"]},
+  {type:"sort",h:"Did it fail before Abyssinia?",intro:"The 10-mark homework: ‘The League had failed before the Abyssinian crisis even started.’ Does each fact support or challenge that?",
+   bins:[{id:"s",label:"Supports",sub:"it had already failed"},{id:"c",label:"Challenges",sub:"it had not yet failed"}],
+   items:[
+   {t:"Japan invaded Manchuria and was not stopped (1931–33).",bin:"s",why:"A major aggressor went unpunished."},
+   {t:"The Disarmament Conference collapsed in 1933.",bin:"s",why:"A central aim failed."},
+   {t:"The USA never joined.",bin:"s",why:"A weakness from the start."},
+   {t:"Germany and Japan left in 1933.",bin:"s",why:"Two great powers walked away."},
+   {t:"Vilna and Corfu: powerful states ignored it.",bin:"s",why:"Even the 1920s showed weakness."},
+   {t:"The League settled the Aaland Islands dispute in 1921.",bin:"c",why:"A real success."},
+   {t:"The League settled the Bulgaria dispute in 1925.",bin:"c",why:"Another success."},
+   {t:"Britain and France still imposed sanctions on Italy in 1935.",bin:"c",why:"They still tried to use the League."},
+   {t:"The humanitarian agencies were still working.",bin:"c",why:"Its useful work continued."}]}
+ ]},
+ {id:"write",label:"Write",blocks:[
+  {type:"brief",h:"Your mark",label:"Focus Task 2.9 Q7",mins:8,q:[{w:"Explain",m:"Give reasons. Not just a mark."}," your ",{w:"mark out of 100",m:"Your own judgement, in the first sentence."}," for the League of Nations."],
+   rules:[["Start: ","I give the League ___ out of 100 because…"],["Success: ","one, with a precise fact."],["Failure: ","one, with a precise fact."],["End: ","overall, the failures / successes matter more because…"]],
+   nudges:["Is the mark in the first sentence?","Is there one success AND one failure?","Does each have a precise fact?","Have you said which matters more, and why?"]}
+ ]},
+ {id:"review",label:"Review",blocks:[
+  {type:"check",h:"Check your paragraph",items:["The mark is in the first sentence","One success with a precise fact","One failure with a precise fact","Says which matters more, and why","Ends by returning to the mark"],bands:[{min:0,t:"Keep going."},{min:3,t:"Getting there."},{min:4,t:"Strong."},{min:5,t:"Secure."}]},
+  {type:"model",h:"Compare with a model",models:[{title:"Model: mark out of 100",q:"Explain your mark out of 100 for the League of Nations.",paras:[[
+   {k:"p",t:"I give the League 40 out of 100 because its successes were real but it failed at its main purpose.",note:"The mark comes first."},
+   {k:"e",t:"In the 1920s it sent about 400,000 prisoners of war home and settled the Aaland Islands dispute.",note:"A success with precise facts."},
+   {k:"x",t:"This meant that it helped many people and could solve small disputes.",note:"Says what it meant."},
+   {k:"e",t:"However, it did not stop Japan in Manchuria or Italy in Abyssinia.",note:"A failure, precisely."},
+   {k:"x",t:"This meant that when great powers broke the rules, the League could not act.",note:"The consequence."},
+   {k:"l",t:"Overall, the failures matter more because keeping peace was the League's main job.",note:"Which matters more, and why."}]]}]},
+  {type:"twin",h:"Write another",twins:[{label:"Twin question",q:"Give the League a mark out of 100 for the <b>1920s only</b>. Explain it.",change:"A shorter time-frame, so the mark and the evidence both change.",mins:8,facts:["Aaland Islands, 1921","Bulgaria, 1925","Locarno, 1925","Humanitarian work","Vilna and Corfu"]}]},
+  {type:"info",kind:"warn",html:"<b>Homework (10-marker).</b> ‘The League of Nations had failed before the Abyssinian crisis even started.’ How far do you agree? [10] Plan: judgement first, an agree paragraph, a disagree paragraph, a conclusion. Use the ‘Did it fail before Abyssinia?’ sort in the Think tab."}
+ ]}
+ ]
+});
+</script></body></html>

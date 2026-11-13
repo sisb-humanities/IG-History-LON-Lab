@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lesson 4 · Abyssinia</title>
+<link rel="stylesheet" href="assets/style.css"></head>
+<body><div id="app"></div>
+<script src="assets/lab.js"></script>
+<script>
+LAB.start({
+ n:4, pages:"Walsh pp.48–51", title:"How did Mussolini's invasion of Abyssinia damage the League?",
+ target:"TWO paragraphs. (a) why Britain and France wanted to keep Italy friendly. (b) how far the Hoare–Laval Pact was to blame.",
+ wire:[["Dec 1934","Wal-Wal incident on the Abyssinian border"],["Apr 1935","Stresa Pact: Britain, France and Italy oppose German rearmament"],["Oct 1935","Italy invades Abyssinia"],["Dec 1935","Hoare–Laval Pact leaks. Public outrage"],["Mar 1936","Hitler marches into the Rhineland"]],
+ tabs:[
+ {id:"warm",label:"Warm-up",blocks:[
+  {type:"sort",h:"Who did what?",intro:"Sort the facts by who acted.",
+   bins:[{id:"mus",label:"Mussolini"},{id:"bf",label:"Britain and France"},{id:"lea",label:"The League"}],
+   items:[
+   {t:"Invaded Abyssinia in October 1935.",bin:"mus",why:"Italy attacked a League member."},
+   {t:"Signed the Stresa Pact in 1935 against German rearmament.",bin:["bf","mus"],why:"Italy, Britain and France all signed. For paragraph (a), it shows why Britain and France valued Italy."},
+   {t:"Banned arms sales, loans and imports from Italy.",bin:"lea",why:"The sanctions the League did impose."},
+   {t:"Did not ban oil sales to Italy.",bin:"lea",why:"The key gap in sanctions."},
+   {t:"Did not close the Suez Canal.",bin:"bf",why:"They feared war with Italy."},
+   {t:"Delayed an oil decision for two months.",bin:"lea",why:"The League hesitated."},
+   {t:"Agreed the secret Hoare–Laval Pact to give Italy most of Abyssinia.",bin:"bf",why:"Britain and France tried to settle it behind the League's back."},
+   {t:"Used its air force and poison gas against Abyssinian forces.",bin:"mus",why:"Italy used modern weapons."},
+   {t:"Feared that coal sanctions would cost 30,000 British miners their jobs.",bin:"bf",why:"Britain put its own economy first."},
+   {t:"Took advantage while Britain and France were distracted by Hitler.",bin:"mus",why:"The fear of Hitler is the key."},
+   {t:"Lost credibility when the Pact leaked.",bin:"lea",why:"People saw the League as helpless."}]},
+  {type:"flash",h:"Key words",cards:[
+   {q:"The Stresa Pact",a:"A 1935 statement by Britain, France and Italy against German rearmament."},
+   {q:"The Peace Ballot",a:"A British poll showing a majority supported military force to defend Abyssinia."},
+   {q:"The Hoare–Laval Pact",a:"A secret deal in December 1935 to give Italy most of Abyssinia. It leaked and caused outrage."},
+   {q:"Why was oil so important?",a:"Italy's army needed it. An oil ban would have halted the invasion."},
+   {q:"Why was the Suez Canal important?",a:"Italy's supply route to East Africa. Closing it would have blocked supplies."},
+   {q:"Which event does Source 11 refer to?",a:"The Rhineland, 7 March 1936."}]}
+ ]},
+ {id:"check",label:"Check",blocks:[
+  {type:"quiz",h:"Knowledge check",items:[
+   {q:"What was the Stresa Pact?",opts:["A statement against German rearmament","A trade treaty with Abyssinia","An agreement to attack Italy"],a:0,why:"Britain and France wanted Italy on their side against Hitler."},
+   {q:"What did the Peace Ballot show?",opts:["Most British people supported force to defend Abyssinia","Britain wanted to leave the League","Nobody voted"],a:0,why:"Public opinion was for firm action, which the government ignored."},
+   {q:"What did the League NOT ban?",opts:["Arms","Loans","Oil"],a:2,why:"Oil would have hurt Italy most."},
+   {q:"Why did Britain hesitate over coal sanctions?",opts:["30,000 British coal miners would lose jobs","Coal was cheap","Italy had no coal"],a:0,why:"Economic self-interest."},
+   {q:"Why was the Suez Canal not closed?",opts:["Britain and France feared war with Italy","The Canal belonged to Abyssinia","The USA forbade it"],a:0,why:"The fear of fighting."},
+   {q:"What did the Hoare–Laval Pact propose?",opts:["Giving Italy two-thirds of Abyssinia","Banning oil","Closing Suez"],a:0,why:"A reward to the aggressor."},
+   {q:"How did the USA undermine the League?",opts:["It increased its oil sales to Italy","It closed its ports","It joined the League"],a:0,why:"Not a member, so no rules applied."},
+   {q:"Who does Morris (Source 14) say was the only winner?",opts:["Mussolini","Hitler","Haile Selassie"],a:1,why:"Hitler took advantage of the League's collapse."}]},
+  {type:"chain",h:"Follow the fear",intro:"Rebuild why Britain and France handled Mussolini so gently.",start:"Hitler was rearming Germany",
+   steps:[{ask:"Who did Britain and France want as an ally?",opts:["Mussolini's Italy","Stalin","Abyssinia"],a:0},
+   {ask:"What did they sign in April 1935?",opts:["The Stresa Pact","The Treaty of Versailles","The Locarno Pact"],a:0},
+   {ask:"So how did they treat Italy in the crisis?",opts:["Gently, to avoid driving Italy towards Hitler","With a full blockade","By expelling Italy"],a:0},
+   {ask:"What did that mean for sanctions?",opts:["No oil ban and the Suez Canal stayed open","Sanctions were total","The USA decided"],a:0}],
+   finish:"Fear of Hitler explains the gentle treatment of Mussolini. That is the heart of paragraph (a)."}
+ ]},
+ {id:"think",label:"Think",blocks:[
+  {type:"weigh",h:"Weigh the factors",intro:"Question (b): <b>how far</b> was the Hoare–Laval Pact responsible? Weigh it against four other factors. Open each ‘Evidence’ to remind yourself. Drag the sliders.",focus:"hoare",focusName:"Hoare–Laval Pact",
+   factors:[
+    {id:"hoare",label:"Hoare–Laval Pact",facts:["A secret deal in December 1935 to give Italy two-thirds of Abyssinia","It leaked, causing outrage in Britain and France","The League looked like a tool of the great powers"]},
+    {id:"oil",label:"No oil sanctions",facts:["Oil was the one thing that could stop Italy's army","The decision was delayed by two months","Britain and France feared the USA would not support it"]},
+    {id:"suez",label:"Suez Canal left open",facts:["Britain and France controlled the Canal","They did not close it","They feared war with Italy"]},
+    {id:"friend",label:"Keeping Italy friendly",facts:["Stresa Pact, April 1935","Britain and France wanted Mussolini against Hitler"]},
+    {id:"usa",label:"USA outside the League",facts:["The USA sold more oil to Italy","Sanctions could be undermined by non-members"]}]},
+  {type:"quiz",h:"Which is the best counter-argument?",intro:"A strong ‘how far’ answer weighs the main factor against another.",items:[
+   {q:"You say the Hoare–Laval Pact was the MAIN cause. Which is the best counter?",opts:["The League had already failed to ban oil or close Suez before the Pact leaked","Mussolini was a dictator","Abyssinia is in Africa"],a:0,why:"It names two other factors that came first."},
+   {q:"You say it was only PARTLY responsible. Which fact best supports this?",opts:["The Pact damaged the League's reputation, but the oil and Suez decisions had already weakened sanctions","The Pact was signed in December","Hoare was British"],a:0,why:"It credits the Pact and weighs it."},
+   {q:"Which sentence would make the best final judgement?",opts:["The Pact was important","Overall the Pact was partly responsible, because the League's sanctions were already weak, but it destroyed what was left of its reputation","Many things happened"],a:1,why:"It gives a judgement and a reason."}]}
+ ]},
+ {id:"write",label:"Write",blocks:[
+  {type:"brief",h:"Paragraph (a)",label:"Question (a)",mins:8,q:["Why did ",{w:"Britain and France",m:"The two leading League members, and the ones who would have had to act."}," want to keep ",{w:"Italy",m:"Under Mussolini. Italy had signed the Stresa Pact."}," friendly?"],
+   rules:[["Start: ","Britain and France wanted to keep Italy friendly because…"],["Use: ","the Stresa Pact, p.48."],["End: ","what this meant for their actions."]],
+   nudges:["Who were they really worried about?","What did the Stresa Pact say?","How did this change how they treated Mussolini?","In 2025 most students gave only one explained point. Aim for two."]},
+  {type:"brief",h:"Paragraph (b)",label:"Question (b)",mins:8,q:[{w:"How far",m:"Judgement first: mainly, partly or not very. Then weigh it."}," was the ",{w:"Hoare–Laval Pact",m:"The secret deal of December 1935."}," responsible for the League's ",{w:"failure",m:"The League failed to stop Italy."}," over Abyssinia?"],
+   rules:[["Start: ","your judgement word and why."],["Then: ","evidence on the Pact (p.50)."],["Weigh: ","‘However, another factor was…’ (oil OR the Suez Canal)."],["End: ","overall, the Pact was … responsible because…"]],
+   nudges:["Is your judgement in the first sentence?","Have you used the weighing sliders in the Think tab?","What was the strongest other factor?","In 2022 weak answers told the story. Do you explain?"]}
+ ]},
+ {id:"review",label:"Review",blocks:[
+  {type:"check",h:"Check paragraph (b)",items:["Judgement word is in the first sentence","Precise evidence about the Pact","One other factor, with evidence","‘However…’ weighs the two","Final sentence repeats the judgement with a reason"],bands:[{min:0,t:"Keep going."},{min:3,t:"Getting there."},{min:4,t:"Strong."},{min:5,t:"Secure."}]},
+  {type:"model",h:"Compare with a model",models:[
+   {title:"Model (a): Italian friendship",q:"Why did Britain and France want to keep Italy friendly?",paras:[[
+    {k:"p",t:"Britain and France wanted to keep Italy friendly because they were afraid of Hitler's Germany.",note:"The real reason, in sentence one."},
+    {k:"e",t:"In April 1935 they signed the Stresa Pact with Italy against German rearmament.",note:"The precise evidence."},
+    {k:"x",t:"This meant that they saw Mussolini as a possible ally against Hitler, so they did not want to push him into Germany's arms.",note:"Explains the link between friendship and fear."},
+    {k:"e",t:"They therefore did not ban oil and did not close the Suez Canal.",note:"Shows the consequence."},
+    {k:"x",t:"This meant that their sanctions were weak, because strong action risked losing Italy as an ally.",note:"Closes the loop."}]]},
+   {title:"Model (b): Hoare–Laval",q:"How far was the Hoare–Laval Pact responsible for the League's failure over Abyssinia?",paras:[[
+    {k:"p",t:"The Hoare–Laval Pact was partly responsible for the League's failure over Abyssinia.",note:"Judgement first."},
+    {k:"e",t:"The secret deal offered Italy two-thirds of Abyssinia, and when it leaked there was public outrage.",note:"Evidence on the Pact."},
+    {k:"x",t:"This meant that the League looked like a tool of the great powers, which destroyed trust in it.",note:"The consequence for the League."},
+    {k:"e",t:"However, the League's sanctions were already weak, because it did not ban oil and Britain and France did not close the Suez Canal.",note:"The counter-factor."},
+    {k:"x",t:"This meant that even without the Pact, Italy could keep supplying its army.",note:"Weighs the two."},
+    {k:"l",t:"Overall, the Pact was partly responsible, because it ended any hope of a recovery but the weak sanctions had already limited the League.",note:"A reasoned judgement."}]]}]},
+  {type:"twin",h:"Write another",twins:[
+   {label:"Twin (a)",q:"Why did the League delay a decision on oil sanctions?",change:"Same crisis, different decision.",mins:8,facts:["Britain and France feared the USA would not support a ban","The ban would have damaged the economy","Delayed two months"]},
+   {label:"Twin (b)",q:"How far was the Suez Canal decision responsible for the League's failure over Abyssinia?",change:"The Pact swaps places with another factor.",mins:8,facts:["Britain and France controlled the Canal","They did not close it","They feared war with Italy","Oil sanctions were also missing"]}]}
+ ]}
+ ]
+});
+</script></body></html>

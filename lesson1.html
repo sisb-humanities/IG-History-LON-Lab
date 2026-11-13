@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lesson 1 · The League's humanitarian work</title>
+<link rel="stylesheet" href="assets/style.css"></head>
+<body><div id="app"></div>
+<script src="assets/lab.js"></script>
+<script>
+LAB.start({
+ n:1, pages:"Walsh pp.38–41", title:"How important was the League's humanitarian work?",
+ target:"ONE paragraph on ONE League agency. Judgement word first, two precise facts, then what each fact meant.",
+ wire:[["1921","Nansen's Refugees Committee begins sending prisoners of war home"],["1924","Dawes Plan: American loans help Germany pay reparations"],["1925","Locarno treaties: Germany accepts its western border"],["1928","Kellogg–Briand Pact: 60+ states renounce war"],["1920s","The ILO proposes a 48-hour working week. Many members refuse"]],
+ tabs:[
+ {id:"warm",label:"Warm-up",blocks:[
+  {type:"flash",h:"Key words and facts",intro:"Say the answer aloud <em>before</em> you flip. Cards you miss come back.",cards:[
+   {q:"What did the ILO do?",a:"International Labour Organization. Worked to improve working conditions: banned poisonous white lead in paint and limited children's working hours."},
+   {q:"Why did members refuse the ILO's 48-hour week?",a:"They said it would cost their industries too much."},
+   {q:"What did the Refugees Committee achieve?",a:"Sent about 400,000 prisoners of war home after the war."},
+   {q:"Why did refugee work get harder in the 1930s?",a:"The Committee was short of funds and the League's authority was declining."},
+   {q:"What did the Health Committee set up?",a:"Research institutes in Singapore, London and Denmark."},
+   {q:"What did the Health Committee become after 1945?",a:"The World Health Organization (WHO)."},
+   {q:"How many slaves did the League help free in Sierra Leone?",a:"About 200,000."},
+   {q:"What happened to the death rate on the Tanganyika railway?",a:"It fell from 50% to 4% after League pressure on forced labour."},
+   {q:"What does ‘name and shame’ mean here?",a:"The League blacklisted four large German, Dutch, Swiss and French companies involved in the illegal drugs trade, hoping publicity would pressure them to stop."},
+   {q:"Why do historians often write less about this work?",a:"Because it was less dramatic than the political crises. But it affected many more people's daily lives."}]},
+  {type:"sort",h:"Which agency?",intro:"One fact at a time. Decide which part of the League's work it belongs to.",
+   bins:[{id:"ref",label:"Refugees"},{id:"ilo",label:"Working conditions"},{id:"hea",label:"Health"},{id:"sla",label:"Slavery"}],
+   items:[
+   {t:"About 400,000 prisoners of war were sent home.",bin:"ref",why:"A Refugees Committee success."},
+   {t:"Poisonous white lead was banned in paint.",bin:"ilo",why:"An ILO ban."},
+   {t:"Institutes opened in Singapore, London and Denmark.",bin:"hea",why:"The Health Committee's research network."},
+   {t:"200,000 slaves were freed in Sierra Leone.",bin:"sla",why:"The Slavery Commission."},
+   {t:"Members refused to adopt a 48-hour week.",bin:"ilo",why:"The ILO's setback."},
+   {t:"The Committee ran short of funds in the 1930s.",bin:"ref",why:"The refugee work depended on funding."},
+   {t:"The death rate on the Tanganyika railway fell from 50% to 4%.",bin:"sla",why:"Forced labour pressure."},
+   {t:"The Committee later became the World Health Organization.",bin:"hea",why:"The Health Committee's legacy."},
+   {t:"Children's working hours were limited.",bin:"ilo",why:"An ILO success."},
+   {t:"Companies in several countries were publicly blacklisted.",bin:["sla","hea"],why:"Part of the League's ‘other action’ against the illegal drugs trade. It sits with health because drugs harm people. Either bin is defensible."}]}
+ ]},
+ {id:"check",label:"Check",blocks:[
+  {type:"quiz",h:"Knowledge check",items:[
+   {q:"Which fact is <b>precise enough</b> to use as evidence?",opts:["The Refugees Committee did a lot of good work","About 400,000 prisoners of war were sent home","The Refugees Committee was quite effective"],a:1,why:"A number or a name is evidence. The other two are opinions."},
+   {q:"The ILO's 48-hour week was refused. What does this show?",opts:["The ILO was a complete success","Members put their own industries first","The ILO banned white lead"],a:1,why:"This is the same weakness that appears again and again: members act in their own interests."},
+   {q:"What did the Health Committee become after 1945?",opts:["The Red Cross","The World Health Organization","The International Court"],a:1,why:"The idea outlived the League. That is part of why it can be called important."},
+   {q:"Which sentence is a <b>judgement</b>?",opts:["The Health Committee set up institutes in Singapore","The Health Committee's work was very important","Institutes opened in Denmark and London"],a:1,why:"A judgement answers ‘how important?’. The others are facts."},
+   {q:"‘Name and shame’ relied on…",opts:["Armed force","Trade sanctions","Public pressure"],a:2,why:"The League had no army. It often could only publicise and persuade."},
+   {q:"Which would NOT help you judge importance?",opts:["How many people were affected","Whether it achieved its aims","The year the agency was founded"],a:2,why:"The textbook's three tests are about aims, numbers affected and how much the League valued the work."}]}
+ ]},
+ {id:"think",label:"Think",blocks:[
+  {type:"agency",h:"The three-test tool",intro:"Choose one agency, then rate it on the textbook's three tests. The tool suggests a judgement word. <b>Your reasons</b> will be the paragraph.",
+   agencies:[
+    {name:"Refugees Committee",facts:["About 400,000 prisoners of war sent home","Short of funds in the 1930s","League authority declined in the 1930s"],hint:["400,000 sent home","hundreds of thousands of people","funding fell short"]},
+    {name:"ILO",facts:["Banned poisonous white lead in paint","Limited children's working hours","48-hour week refused by members"],hint:["bans achieved, 48-hour week not","workers in many countries","members would not agree"]},
+    {name:"Health Committee",facts:["Institutes in Singapore, London and Denmark","Became the WHO after 1945"],hint:["research network built","people on several continents","survived the League"]},
+    {name:"Slavery Commission",facts:["200,000 slaves freed in Sierra Leone","Tanganyika railway death rate 50% to 4%"],hint:["freedom and lower deaths","a very large number","lasting results"]}],
+   tests:[{name:"Aims",q:"Did it achieve what it set out to do?"},{name:"Numbers",q:"How many people did it affect?"},{name:"Value",q:"How much did the League value it?"}]},
+  {type:"prompt",h:"From fact to meaning",intro:"A fact is only evidence once you say what it <em>meant</em>. Write one sentence in your notebook for each, starting with ‘This meant that…’.",items:[
+   {fact:"The death rate on the Tanganyika railway fell from 50% to 4%.",ask:"What did this mean for the workers, and for the League's reputation?",hints:["Who was affected, and how many?","Did it save lives, change laws or both?","Did it show the League could change things without an army?"],example:"This meant that far fewer workers died building the railway, which shows the League could improve real lives through pressure alone."},
+   {fact:"Members refused to accept a 48-hour working week.",ask:"What did this mean for the ILO's power?",hints:["Who decided in the end?","Why did members refuse?","What does this say about the League's authority?"],example:"This meant that the ILO could recommend but not enforce, because governments protected their own industries first."},
+   {fact:"The Refugees Committee was short of funds in the 1930s.",ask:"What did this mean for its work?",hints:["What was the work, and what did it need?","How is this linked to the League's wider decline?"],example:"This meant that its work was limited just as more refugees needed help, which shows its success depended on members' support."}]}
+ ]},
+ {id:"write",label:"Write",blocks:[
+  {type:"brief",h:"Your paragraph",intro:"Choose <b>one</b> agency. Tap the highlighted words to see what the question wants.",label:"Question",mins:8,
+   q:["How ",{w:"important",m:"This asks for a judgement: very, fairly or not very. Say which, and say it first."}," was the work of ",{w:"one League agency",m:"Pick one. Writing about two agencies loses marks."},"?"],
+   rules:[["Start: ","your judgement word and why."],["Then: ","two precise facts, each followed by ‘This meant that…’."],["End: ","a short link back to the judgement."]],
+   nudges:["Which of your two facts would convince a sceptic most? Put it first.","Does each fact have a number, place or name in it?","After each fact, have you said what it meant for people?","Does your last sentence use your judgement word again?"]}
+ ]},
+ {id:"review",label:"Review",blocks:[
+  {type:"check",h:"Check your own paragraph",items:["Judgement word (very / fairly / not very) is in the first sentence","About ONE agency only","Two precise facts (numbers, places or names)","After each fact, ‘This meant that…’ explains it","The explanation says what it meant for people or for the League","Last sentence links back to the judgement"],bands:[{min:0,t:"Keep going: aim to tick at least five."},{min:4,t:"Getting there. Fix the unticked items."},{min:5,t:"Strong."},{min:6,t:"Secure."}]},
+  {type:"model",h:"Compare with a model",models:[{title:"Model: Health Committee",q:"How important was the work of one League agency?",paras:[[
+   {k:"p",t:"The work of the Health Committee was very important because it created a research network that outlived the League.",note:"The judgement is in sentence one, so the examiner knows your answer at once."},
+   {k:"e",t:"It set up research institutes in Singapore, London and Denmark.",note:"Three places: precise, and drawn straight from the textbook."},
+   {k:"x",t:"This meant that its research was shared across more than one continent, not kept in Geneva.",note:"‘This meant that…’ turns the fact into a consequence."},
+   {k:"e",t:"After 1945 the Committee became the World Health Organization.",note:"A second fact. It is different from the first, not more of the same."},
+   {k:"x",t:"This shows the work was valuable enough to survive the League's collapse.",note:"The meaning links to importance."},
+   {k:"l",t:"Therefore, the Health Committee was very important because its work reached many people and lasted.",note:"The link repeats the judgement and the reason."}]]}]},
+  {type:"twin",h:"Write another",twins:[{label:"Twin question",q:"How important was the work of the <b>International Labour Organization</b>?",change:"Different agency. This time the facts push you towards ‘fairly’, because of the refused 48-hour week.",mins:8,facts:["Banned poisonous white lead in paint","Limited children's working hours","Members refused the 48-hour week"]}]}
+ ]}
+ ]
+});
+</script></body></html>
