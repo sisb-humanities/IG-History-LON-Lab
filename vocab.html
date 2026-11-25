@@ -53,6 +53,7 @@ table.words{width:100%;border-collapse:collapse;font-size:16px;background:#fff;b
 table.words th{background:var(--lacquer);color:#f4ede1;text-align:left;font:700 13px var(--display);letter-spacing:.14em;text-transform:uppercase;padding:9px 12px}
 table.words td{border-bottom:1px solid var(--line);padding:9px 12px;vertical-align:top}
 table.words td.w{font:700 17px var(--display);color:var(--teal-d);white-space:nowrap}
+.tag.kw{background:var(--teal);color:#fff;margin-left:4px}
 .tag{display:inline-block;font:700 11px var(--display);letter-spacing:.12em;text-transform:uppercase;background:var(--stone);color:var(--brass-d);border-radius:99px;padding:3px 9px;white-space:nowrap}
 .result{text-align:center;padding:16px 8px}
 .result .big{font:700 52px var(--display);color:var(--teal-d)}
@@ -73,7 +74,7 @@ table.words td.w{font:700 17px var(--display);color:var(--teal-d);white-space:no
   <div class="hero">
     <div class="kicker">Key words · Walsh pp.38–53</div>
     <h1>The Word Wall</h1>
-    <div class="target"><b>How it works</b><span>Choose which lessons to revise, then pick a game. Start with Flashcards if the words are new.</span></div>
+    <div class="target"><b>How it works</b><span>Start with the 20 textbook keywords from p.53, or choose lessons. Then pick a game. Start with Flashcards if the words are new.</span></div>
   </div>
   <div class="lessons" id="lessons" role="group" aria-label="Choose lessons"></div>
   <div class="count" id="count"></div>
@@ -87,44 +88,52 @@ table.words td.w{font:700 17px var(--display);color:var(--teal-d);white-space:no
 (function(){
 "use strict";
 var WORDS=[
- [0,"Covenant","The set of rules that every League member agreed to follow."],
- [0,"Assembly","The League’s ‘parliament’, where every member country had one vote."],
- [0,"Council","The smaller League body of the most powerful members. It met more often and dealt with crises."],
- [0,"Collective security","The idea that members act together to protect any member that is attacked."],
- [1,"Humanitarian","Work that improves people’s lives and welfare, such as health, refugees and working conditions."],
- [1,"ILO","The International Labour Organization. It worked to improve working conditions, for example banning poisonous white lead in paint."],
- [1,"Refugees","People forced to leave their homes. The League’s committee sent about 400,000 prisoners of war home."],
- [1,"Slavery Commission","The League body that worked to end slavery and forced labour. It helped free 200,000 slaves in Sierra Leone."],
- [1,"Health Committee","The League body that set up research institutes in Singapore, London and Denmark. It later became the WHO."],
- [1,"Dawes Plan","The 1924 plan that used American loans to help Germany pay reparations."],
- [1,"Locarno Treaties","The 1925 agreements in which Germany accepted its western borders."],
- [1,"Kellogg–Briand Pact","The 1928 agreement in which over 60 countries promised not to use war to settle disputes."],
- [2,"Wall Street Crash","The collapse of the American stock market in October 1929 that began the Depression."],
- [2,"Depression","The worldwide economic slump after 1929, with mass unemployment and falling trade."],
- [2,"Tariffs","Taxes on imported goods. Countries raised them after 1929, so world trade fell further."],
- [2,"Manchuria","The region of north-east China, rich in raw materials, that Japan invaded in 1931."],
- [2,"Mukden Incident","The 1931 explosion on the Japanese-controlled railway near Mukden. Japan blamed China and used it as an excuse to invade."],
- [2,"Lytton Report","The League’s inquiry into Manchuria. It took a year and said Japan should withdraw."],
- [2,"Aggressor","A country that attacks another country."],
- [3,"Disarmament","Reducing the number of weapons and the size of armed forces."],
- [3,"Disarmament Conference","The League’s meeting from 1932 to try to reduce arms. It collapsed after Germany left in 1933."],
- [3,"Rearmament","Building up weapons and armed forces again. Hitler began this after 1933."],
- [4,"Sanctions","Measures, such as banning trade, used to pressure or punish a country."],
- [4,"Abyssinia","The independent African country (now Ethiopia) that Italy invaded in October 1935."],
- [4,"Stresa Pact","The 1935 agreement between Britain, France and Italy to stand together against German rearmament."],
- [4,"Hoare–Laval Pact","The secret 1935 plan by Britain and France to give Italy two-thirds of Abyssinia."],
- [4,"Suez Canal","The waterway owned by Britain and France. They did not close it to Italy’s supply ships."],
- [4,"Annex","To take over another country’s territory and make it part of your own."],
- [4,"Rhineland","The German area next to France. Hitler sent troops there in March 1936, breaking the Treaty of Versailles."],
- [5,"Isolationism","The US policy of keeping out of other countries’ affairs, which kept the USA out of the League."],
- [5,"Self-interest","Putting your own country’s needs first instead of acting together."],
- [5,"Absent powers","The great powers missing from the League, such as the USA, which never joined."]
+ /* lesson, word, meaning, 1 = on the p.53 Keywords list */
+ [0,"Covenant","The set of rules that every League member agreed to follow.",1],
+ [0,"Article 10","The part of the Covenant in which members promised to act together to protect each other’s land and independence from attack.",1],
+ [0,"Collective security","The idea that members act together to protect any member that is attacked.",1],
+ [0,"Assembly","The League’s ‘parliament’, where every member country had one vote.",1],
+ [0,"Council","The smaller League body of the most powerful members. It met more often and dealt with crises.",1],
+ [0,"Secretariat","The League’s civil service. It kept records and organised the League’s work.",1],
+ [0,"Commissions","League committees set up to deal with particular problems, such as refugees, health and slavery.",1],
+ [0,"Unanimous","When everyone agrees. Decisions in the Assembly and Council had to be unanimous, which made the League slow to act.",1],
+ [0,"Conference of Ambassadors","A body of ambassadors from Britain, France and Italy, set up to sort out problems from the peace treaties. It sometimes overruled the League.",1],
+ [0,"Moral condemnation","The League’s first step against an aggressor: publicly saying it was wrong and telling it to stop.",1],
+ [0,"Trade sanctions","The League’s second step: members stop trading with an aggressor to put pressure on it.",1],
+ [0,"Military force","The League’s last step: using the armies of member countries against an aggressor. The League had no army of its own.",1],
+ [0,"Isolationism","The US policy of keeping out of other countries’ affairs, which kept the USA out of the League.",1],
+ [0,"Normalcy","The US aim after the war of returning to ‘normal’ life and staying out of foreign problems.",1],
+ [1,"Humanitarian","Work that improves people’s lives and welfare, such as health, refugees and working conditions.",0],
+ [1,"ILO","The International Labour Organization. It worked to improve working conditions, for example banning poisonous white lead in paint.",0],
+ [1,"Refugees Committee","The League body that helped people forced from their homes. It sent about 400,000 prisoners of war home.",0],
+ [1,"Health Committee","The League body that set up research institutes in Singapore, London and Denmark. It later became the WHO.",0],
+ [1,"Dawes Plan","The 1924 plan that used American loans to help Germany pay reparations.",0],
+ [1,"Locarno Treaties","The 1925 agreements in which Germany accepted its western borders.",0],
+ [1,"Kellogg–Briand Pact","The 1928 agreement in which over 60 countries promised not to use war to settle disputes.",0],
+ [2,"Wall Street Crash","The collapse of the American stock market in October 1929 that began the Depression.",1],
+ [2,"Economic depression","The worldwide economic slump after 1929, with mass unemployment and falling trade.",1],
+ [2,"Tariffs","Taxes on imported goods. Countries raised them after 1929, so world trade fell further.",1],
+ [2,"Manchurian crisis","Japan’s invasion of Manchuria in north-east China in 1931, and the League’s failure to stop it.",1],
+ [2,"Mukden Incident","The 1931 explosion on the Japanese-controlled railway near Mukden. Japan blamed China and used it as an excuse to invade.",0],
+ [2,"Lytton Report","The League’s inquiry into Manchuria. It took a year and said Japan should withdraw.",0],
+ [2,"Aggressor","A country that attacks another country.",0],
+ [3,"Disarmament","Reducing the number of weapons and the size of armed forces.",1],
+ [3,"Disarmament Conference","The League’s meeting from 1932 to try to reduce arms. It collapsed after Germany left in 1933.",0],
+ [3,"Rearmament","Building up weapons and armed forces again. Hitler began this after 1933.",0],
+ [4,"Abyssinian crisis","Italy’s invasion of Abyssinia (now Ethiopia) in 1935–36, and the League’s failure to stop it.",1],
+ [4,"Stresa Pact","The 1935 agreement between Britain, France and Italy to stand together against German rearmament.",0],
+ [4,"Hoare–Laval Pact","The secret 1935 plan by Britain and France to give Italy two-thirds of Abyssinia.",0],
+ [4,"Suez Canal","The waterway owned by Britain and France. They did not close it to Italy’s supply ships.",0],
+ [4,"Annex","To take over another country’s territory and make it part of your own.",0],
+ [4,"Rhineland","The German area next to France. Hitler sent troops there in March 1936, breaking the Treaty of Versailles.",0],
+ [5,"Self-interest","Putting your own country’s needs first instead of acting together.",0],
+ [5,"Absent powers","The great powers missing from the League, such as the USA, which never joined.",0]
 ];
 var LESSON=["Part 1 recap","Lesson 1","Lesson 2","Lesson 3","Lesson 4","Lesson 5"];
-var ALL=[0,1,2,3,4,5],KEY="g9lon-wordwall";
+var ALL=[0,1,2,3,4,5],KEY="g9lon-wordwall2";
 function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return {}}}
 function save(o){try{localStorage.setItem(KEY,JSON.stringify(o))}catch(e){}}
-var prefs=load(),on=prefs.on||ALL.slice(),mode=prefs.mode||"cards",timers=[];
+var prefs=load(),on=prefs.on||"kw",mode=prefs.mode||"cards",timers=[];
 function clearTimers(){timers.forEach(function(t){clearInterval(t);clearTimeout(t)});timers=[]}
 function log(a,d){try{if(window.SISB_TRACKER&&window.SISB_TRACKER.log)window.SISB_TRACKER.log("G9 HIST LON","wordwall-"+a,d)}catch(e){}}
 function h(tag,attrs){var e=document.createElement(tag);if(attrs)for(var k in attrs){var v=attrs[k];if(v==null||v===false)continue;
@@ -132,21 +141,22 @@ function h(tag,attrs){var e=document.createElement(tag);if(attrs)for(var k in at
   for(var i=2;i<arguments.length;i++)add(e,arguments[i]);return e}
 function add(e,c){if(c==null||c===false)return;if(Array.isArray(c)){c.forEach(function(x){add(e,x)});return}e.appendChild(c.nodeType?c:document.createTextNode(c))}
 function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
-function pool(){return WORDS.filter(function(w){return on.indexOf(w[0])>-1}).map(function(w){return {l:w[0],w:w[1],d:w[2]}})}
+function pool(){return WORDS.filter(function(w){return on==="kw"?w[3]===1:on.indexOf(w[0])>-1}).map(function(w){return {l:w[0],w:w[1],d:w[2],k:w[3]}})}
 function fb(ok,title,text){return h("div",{class:"fb "+(ok?"ok":"no"),role:"status"},h("b",{class:"t"},title),text||"")}
 var stage=document.getElementById("stage");
 
 /* lesson filter */
 function drawLessons(){
   var f=document.getElementById("lessons");f.innerHTML="";
-  var all=on.length===ALL.length;
-  f.append(h("button",{class:"pill","aria-pressed":all?"true":"false",onclick:function(){on=ALL.slice();changed()}},"All lessons"));
+  var kw=on==="kw",all=!kw&&on.length===ALL.length;
+  f.append(h("button",{class:"pill","aria-pressed":kw?"true":"false",onclick:function(){on="kw";changed()}},"Textbook keywords (p.53)"));
+  f.append(h("button",{class:"pill","aria-pressed":all?"true":"false",onclick:function(){on=ALL.slice();changed()}},"Every word"));
   LESSON.forEach(function(name,i){
-    f.append(h("button",{class:"pill","aria-pressed":(!all&&on.indexOf(i)>-1)?"true":"false",onclick:function(){
-      if(all)on=[i];else if(on.indexOf(i)>-1){on=on.filter(function(x){return x!==i});if(!on.length)on=ALL.slice()}else on.push(i);
+    f.append(h("button",{class:"pill","aria-pressed":(!kw&&!all&&on.indexOf(i)>-1)?"true":"false",onclick:function(){
+      if(kw||all)on=[i];else if(on.indexOf(i)>-1){on=on.filter(function(x){return x!==i});if(!on.length)on="kw"}else on.push(i);
       changed()}},name));
   });
-  document.getElementById("count").textContent=pool().length+" words selected";
+  document.getElementById("count").textContent=pool().length+" words selected"+(kw?" · the 20 terms in the Keywords box, p.53":"");
 }
 function changed(){prefs.on=on;save(prefs);drawLessons();run()}
 
@@ -283,8 +293,8 @@ function tf(p){
 /* word list */
 function list(p){
   head("Word list","Every word and its meaning. Use it to check your notebook.");
-  var t=h("table",{class:"words"},h("tr",null,h("th",null,"Word"),h("th",null,"Meaning"),h("th",null,"Lesson")));
-  p.forEach(function(x){t.append(h("tr",null,h("td",{class:"w"},x.w),h("td",null,x.d),h("td",null,h("span",{class:"tag"},LESSON[x.l]))))});
+  var t=h("table",{class:"words"},h("tr",null,h("th",null,"Word"),h("th",null,"Meaning"),h("th",null,"Where")));
+  p.forEach(function(x){t.append(h("tr",null,h("td",{class:"w"},x.w),h("td",null,x.d),h("td",null,h("span",{class:"tag"},LESSON[x.l]),x.k?h("span",{class:"tag kw"},"p.53"):null)))});
   stage.append(t);
 }
 drawLessons();drawModes();run();
